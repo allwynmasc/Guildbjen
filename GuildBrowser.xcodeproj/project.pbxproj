@@ -16,6 +16,7 @@
 		6746840A198774CE00F2CB3C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDD2315E9B34900B3713E /* Item.m */; };
 		6746840B198774CE00F2CB3C /* WoWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDD2B15E9B34900B3713E /* WoWUtils.m */; };
 		6746840D1987761A00F2CB3C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6746840C1987761A00F2CB3C /* XCTest.framework */; };
+		67565D8519878B85000FAF97 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC5D15E9872E00B3713E /* SenTestingKit.framework */; };
 		CB9FDC4015E9872D00B3713E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC3F15E9872D00B3713E /* UIKit.framework */; };
 		CB9FDC4215E9872D00B3713E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC4115E9872D00B3713E /* Foundation.framework */; };
 		CB9FDC4415E9872D00B3713E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC4315E9872D00B3713E /* CoreGraphics.framework */; };
@@ -78,6 +79,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CB9FDC3A15E9872D00B3713E;
 			remoteInfo = GuildBrowser;
+		};
+		6746841119877BA900F2CB3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB9FDC3215E9872D00B3713E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 674683F219876D5800F2CB3C;
+			remoteInfo = GuildBrowserLogicTests;
 		};
 		CB9FDC6115E9872E00B3713E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -182,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67565D8519878B85000FAF97 /* SenTestingKit.framework in Frameworks */,
 				6746840D1987761A00F2CB3C /* XCTest.framework in Frameworks */,
 				674683F719876D5800F2CB3C /* UIKit.framework in Frameworks */,
 				674683F619876D5800F2CB3C /* Foundation.framework in Frameworks */,
@@ -447,6 +456,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6746841219877BA900F2CB3C /* PBXTargetDependency */,
 			);
 			name = GuildBrowser;
 			productName = GuildBrowser;
@@ -480,11 +490,6 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Charlie Fulton";
-				TargetAttributes = {
-					674683F219876D5800F2CB3C = {
-						TestTargetID = CB9FDC3A15E9872D00B3713E;
-					};
-				};
 			};
 			buildConfigurationList = CB9FDC3515E9872D00B3713E /* Build configuration list for PBXProject "GuildBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -628,6 +633,11 @@
 			target = CB9FDC3A15E9872D00B3713E /* GuildBrowser */;
 			targetProxy = 6746840F1987768200F2CB3C /* PBXContainerItemProxy */;
 		};
+		6746841219877BA900F2CB3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 674683F219876D5800F2CB3C /* GuildBrowserLogicTests */;
+			targetProxy = 6746841119877BA900F2CB3C /* PBXContainerItemProxy */;
+		};
 		CB9FDC6215E9872E00B3713E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CB9FDC3A15E9872D00B3713E /* GuildBrowser */;
@@ -674,7 +684,6 @@
 		6746840319876D5800F2CB3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuildBrowser.app/GuildBrowser";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -703,7 +712,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -711,7 +719,6 @@
 		6746840419876D5800F2CB3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuildBrowser.app/GuildBrowser";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -736,7 +743,6 @@
 				INFOPLIST_FILE = "GuildBrowserLogicTests/GuildBrowserLogicTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -864,6 +870,7 @@
 				6746840419876D5800F2CB3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB9FDC3515E9872D00B3713E /* Build configuration list for PBXProject "GuildBrowser" */ = {
 			isa = XCConfigurationList;
